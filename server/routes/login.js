@@ -40,9 +40,12 @@ app.post('/login', (req, res) => {
             })
         }
 
+        // let token = jwt.sign({
+        //     user: userDB
+        // }, 'this-is-the-development-seed', { expiresIn: 60 * 60 * 24 * 30 });
         let token = jwt.sign({
             user: userDB
-        }, 'this-is-the-development-seed', { expiresIn: 60 * 60 * 24 * 30 });
+        }, process.env.SEED, { expiresIn: 60 * 60 * 24 * 30 });
 
         res.json({
             ok: true,

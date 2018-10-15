@@ -18,7 +18,7 @@ process.env.CADUCITY_TOKEN = 60 * 60 * 24 * 30;
 // SEED TOKEN
 process.env.SEED = process.env.SEED || 'this-is-the-development-seed';
 
-
+console.log(process.env.SEED);
 
 let urlDB;
 
