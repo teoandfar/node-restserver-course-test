@@ -9,12 +9,25 @@ process.env.PORT = process.env.PORT || 3000;
 // stablished by heroku
 process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 
+
+// ENDING DATE
+// 60 seg * 60 min * 24 h * 30 days
+process.env.CADUCITY_TOKEN = 60 * 60 * 24 * 30;
+
+
+// SEED TOKEN
+process.env.SEED = process.env.SEED || 'this-is-the-development-seed';
+
+
+
 let urlDB;
 
 if (process.env.NODE_ENV === 'dev') {
-    urlDB = 'mongodb: //localhost:27017/coffee';
+    urlDB = 'mongodb://localhost:27017/coffee';
 } else {
     urlDB = process.env.MONGO_URI;
 }
+
+console.log(urlDB);
 
 process.env.URL_DB = urlDB;
