@@ -18,7 +18,7 @@ app.use(bodyParser.json())
 app.use(require('./routes/index'));
 
 
-
+console.log('server2');
 mongoose.connect(process.env.URL_DB, { useNewUrlParser: true }, (err, res) => {
     if (err) throw err;
     console.log('Database online');
