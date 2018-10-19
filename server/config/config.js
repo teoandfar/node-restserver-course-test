@@ -20,6 +20,9 @@ process.env.SEED = process.env.SEED || 'this-is-the-development-seed';
 
 console.log(process.env.SEED);
 
+
+// DATABASE
+
 let urlDB;
 
 if (process.env.NODE_ENV === 'dev') {
@@ -31,3 +34,7 @@ if (process.env.NODE_ENV === 'dev') {
 console.log(urlDB);
 
 process.env.URL_DB = urlDB;
+
+
+// GOOGLE CLIENT ID
+process.env.CLIENT_ID = process.env.CLIENT_ID || '397420803670-453rha1h3pffur5sq5uku92kf3i31ld4.apps.googleusercontent.com';
